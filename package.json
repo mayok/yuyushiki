@@ -1,0 +1,31 @@
+{
+  "name": "yuyushiki",
+  "version": "1.0.0",
+  "description": "css でゆゆ式のキャラクターを描く",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "node-reset-scss": "^1.0.1",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "sanitize.css": "^3.3.0"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayok/yuyushiki.git"
+  },
+  "author": "mayok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayok/yuyushiki/issues"
+  },
+  "homepage": "https://mayok.github.io/"
+}

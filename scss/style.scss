@@ -1,0 +1,118 @@
+@import "_reset";
+
+$bg-color: darken(#7361a2, 5%);
+$face-color: #fefefe;
+$cheek-color: #f2d5cc;
+
+$face-width:  480px;
+$face-height: 640px;
+$eye-height: 100px;
+$eye-width:  35px;
+$ebrow-height: $eye-height / 3;
+$ebrow-width:  2px;
+$cheek-height: $eye-height / 8;
+$cheek-width:  3px;
+$mouth-width:  $eye-height / 4;
+$mouth-height: $eye-height / 6;
+$mouth-width2:  $mouth-width / 2;
+$mouth-height2: $mouth-height / 2;
+
+@mixin eyes($p: left) {
+  position: absolute;
+  top: 30%;
+
+  width:  $eye-width;
+  height: $eye-height;
+  background: $face-color;
+
+  @if $p == left {
+    left: 27%;
+  } @else {
+    right: 27%;
+  }
+}
+
+@mixin eyebrows($p: left) {
+  position: absolute;
+  top: 19%;
+
+  width: $ebrow-width;
+  height: $ebrow-height;
+  background: $face-color;
+
+  @if $p == left {
+    left: 33.5%;
+    transform: skewX(40deg);
+  } @else {
+    right: 33.5%;
+    transform: skewX(-40deg);
+  }
+}
+
+@mixin cheeks($p: left, $v: 18%) {
+  position: absolute;
+  top: 51%;
+  width:  $cheek-width;
+  height: $cheek-height;
+  background: $cheek-color;
+  transform: skewX(-30deg);
+
+  @if $p == left {
+    left: $v;
+  } @else {
+    right: $v;
+  }
+}
+
+html, body, #main {
+  height: 100%;
+}
+
+#main {
+  background: $bg-color;
+}
+
+.container {
+  padding-top: 1em;
+}
+
+.face {
+  position: relative;
+  width:  $face-width;
+  height: $face-height;
+  margin: 0 auto;
+}
+
+.left {
+  &-eye { @include eyes(left); }
+
+  &-eyebrow { @include eyebrows(left); }
+
+  &-cheek1 { @include cheeks(left, 22%); }
+  &-cheek2 { @include cheeks(left, 24.8%); }
+  &-cheek3 { @include cheeks(left, 27.1%); }
+  &-cheek4 { @include cheeks(left, 29.6%); }
+}
+
+.right {
+  &-eye { @include eyes(right); }
+
+  &-eyebrow { @include eyebrows(right); }
+
+  &-cheek1 { @include cheeks(right, 31%); }
+  &-cheek2 { @include cheeks(right, 29%); }
+  &-cheek3 { @include cheeks(right, 26.5%); }
+  &-cheek4 { @include cheeks(right, 24%); }
+}
+
+.mouth {
+  position: absolute;
+  top: 58%;
+  left:  0;
+  right: 0;
+  margin: auto;
+  width:  $mouth-width;
+  height: $mouth-height;
+  border-top: 2px solid $face-color;
+  border-radius: $mouth-width2 unquote("/") $mouth-height2;
+}
