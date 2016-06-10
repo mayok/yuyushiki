@@ -1,0 +1,243 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body, #main {
+  height: 100%; }
+
+.container {
+  padding-top: 1em; }
+
+.yui {
+  min-height: 100%;
+  background: #b3a855; }
+  .yui .face {
+    position: relative;
+    width: 480px;
+    height: 640px;
+    margin: 0 auto; }
+  .yui .left-eye1 {
+    position: absolute;
+    top: 23%;
+    left: 23%;
+    width: 71.5px;
+    height: 130px;
+    background: #fefefe;
+    border-radius: 0 0 35.75px 71.5px / 0 0 65px 130px; }
+  .yui .left-eye2 {
+    position: absolute;
+    top: 23%;
+    left: 23%;
+    margin-top: 50.14286px;
+    margin-left: 28.6px;
+    width: 29.79167px;
+    height: 72.22222px;
+    border: thick solid #585c68;
+    border-radius: 0 0 35.75px 35.75px / 0 0 65px 65px; }
+  .yui .left-eye3 {
+    position: absolute;
+    top: 23%;
+    left: 23%;
+    width: 71.5px;
+    height: 65px;
+    background: #b3a855; }
+  .yui .left-eye4 {
+    position: absolute;
+    top: 23%;
+    left: 23%;
+    margin-top: 55.71429px;
+    width: 71.5px;
+    height: 9.28571px;
+    background: #585c68; }
+  .yui .left-eye5 {
+    position: absolute;
+    top: 23%;
+    left: 23%;
+    margin-top: 55.71429px;
+    width: 6.19048px;
+    height: 32.5px;
+    background: #585c68;
+    border-radius: 0 0 0 9.28571px / 0 0 0 32.5px; }
+  .yui .left-eyebrow {
+    position: absolute;
+    top: 19%;
+    width: 85.8px;
+    height: 10px;
+    border-bottom: 2px solid #fefefe;
+    border-radius: 85.8px / 10px;
+    left: 24%;
+    -webkit-transform: skewY(-8deg);
+            transform: skewY(-8deg); }
+  .yui .left-cheek1 {
+    position: absolute;
+    top: 48%;
+    width: 3px;
+    height: 16.25px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 22%; }
+  .yui .left-cheek2 {
+    position: absolute;
+    top: 48%;
+    width: 3px;
+    height: 16.25px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 24.8%; }
+  .yui .right-eye1 {
+    position: absolute;
+    top: 23%;
+    right: 23%;
+    width: 71.5px;
+    height: 130px;
+    background: #fefefe;
+    border-radius: 0 0 71.5px 35.75px / 0 0 130px 65px; }
+  .yui .right-eye2 {
+    position: absolute;
+    top: 23%;
+    right: 23%;
+    margin-top: 50.14286px;
+    margin-right: 28.6px;
+    width: 29.79167px;
+    height: 72.22222px;
+    border: thick solid #585c68;
+    border-radius: 0 0 35.75px 35.75px / 0 0 65px 65px; }
+  .yui .right-eye3 {
+    position: absolute;
+    top: 23%;
+    right: 23%;
+    width: 71.5px;
+    height: 65px;
+    background: #b3a855; }
+  .yui .right-eye4 {
+    position: absolute;
+    top: 23%;
+    right: 23%;
+    margin-top: 55.71429px;
+    width: 71.5px;
+    height: 9.28571px;
+    background: #585c68; }
+  .yui .right-eye5 {
+    position: absolute;
+    top: 23%;
+    right: 23%;
+    margin-top: 55.71429px;
+    width: 6.19048px;
+    height: 32.5px;
+    background: #585c68;
+    border-radius: 0 0 9.28571px 0 / 0 0 32.5px 0; }
+  .yui .right-eyebrow {
+    position: absolute;
+    top: 19%;
+    width: 85.8px;
+    height: 10px;
+    border-bottom: 2px solid #fefefe;
+    border-radius: 85.8px / 10px;
+    right: 24%;
+    -webkit-transform: skewY(10deg);
+            transform: skewY(10deg); }
+  .yui .right-cheek3 {
+    position: absolute;
+    top: 48%;
+    width: 3px;
+    height: 16.25px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 26.5%; }
+  .yui .right-cheek4 {
+    position: absolute;
+    top: 48%;
+    width: 3px;
+    height: 16.25px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 24%; }
+  .yui .nose {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fefefe;
+    width: 1px;
+    height: 3px;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  .yui .mouth {
+    display: table;
+    position: relative;
+    top: 60%;
+    margin: auto;
+    width: 29.79167px;
+    height: 4.35074px;
+    border-bottom: 1px solid #fefefe;
+    border-radius: 0 0 14.89583px 14.89583px / 0 0 2.70833px 2.70833px; }
+  .yui .mouth1 {
+    display: table-cell;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 35.75px;
+    height: 10.83333px;
+    border-top: 1px solid #fefefe;
+    margin-left: -29.79167px;
+    border-radius: 7.44792px 29.79167px 0 0 / 5.41667px 5.41667px 0 0; }
+  .yui .mouth2 {
+    display: table-cell;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 35.75px;
+    height: 10.83333px;
+    border-top: 1px solid #fefefe;
+    margin-right: -29.79167px;
+    border-radius: 29.79167px 7.44792px 0 0 / 5.41667px 5.41667px 0 0; }

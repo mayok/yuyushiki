@@ -1,0 +1,221 @@
+@import "_reset";
+
+$bg-color:    darken(#cec791, 17%);
+$face-color:  #fefefe;
+$black:       #585c68;
+$cheek-color: #f2d5cc;
+
+$face-width:    480px;
+$face-height:   640px;
+$eye-height:    130px;
+$eye-width:     71.5px;
+$eye-height2:   $eye-height / 2;
+$eye-width2:    $eye-width / 2;
+$eye-shadow:    $eye-height / 14;
+$ebrow-height:  10px;
+$ebrow-width:   $eye-width * 1.2;
+$cheek-height:  $eye-height / 8;
+$cheek-width:   3px;
+$mouth-width:   $eye-width / 1.2;
+$mouth-height:  $eye-height / 6;
+$mouth-width2:  $mouth-width / 2;
+$mouth-height2: $mouth-height / 2;
+
+@mixin eyes($p: left) {
+  position: absolute;
+  top: 23%;
+
+  @if $p == left {
+    left: 23%;
+  } @else {
+    right: 23%;
+  }
+}
+
+@mixin eyebrows($p: left) {
+  position: absolute;
+    top: 19%;
+
+  width: $ebrow-width;
+  height: $ebrow-height;
+  border-bottom: 2px solid $face-color;
+  border-radius: $ebrow-width unquote("/") $ebrow-height;
+
+  @if $p == left {
+    left: 24%;
+    transform: skewY(-8deg);
+  } @else {
+    right: 24%;
+    transform: skewY(10deg);
+  }
+}
+
+@mixin cheeks($p: left, $v: 18%) {
+  position: absolute;
+  top: 48%;
+  width:  $cheek-width;
+  height: $cheek-height;
+  background: $cheek-color;
+  transform: skewX(-30deg);
+
+  @if $p == left {
+    left: $v;
+  } @else {
+    right: $v;
+  }
+}
+
+@mixin mouth {
+  display: table-cell;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: $mouth-width2 * 1.2;
+  height: $mouth-height2;
+  border-top: 1px solid $face-color;
+}
+
+html, body, #main {
+  height: 100%;
+}
+
+.container {
+  padding-top: 1em;
+}
+
+.yui {
+  min-height: 100%;
+  background: $bg-color;
+
+  .face {
+    position: relative;
+    width:  $face-width;
+    height: $face-height;
+    margin: 0 auto;
+  }
+
+  .left {
+    &-eye1 {
+      @include eyes(left);
+      width: $eye-width;
+      height: $eye-height;
+      background: $face-color;
+      border-radius: 0 0 $eye-width2 $eye-width unquote("/") 0 0 $eye-height2 $eye-height;
+    }
+    &-eye2 {
+      @include eyes(left);
+      margin-top: $eye-height2 - $eye-shadow * 1.6;
+      margin-left: $eye-width2 / 1.25;
+      width: $eye-width2 / 1.2;
+      height: $eye-height / 1.8;
+      border: thick solid $black;
+      border-radius: 0 0 $eye-width2 $eye-width2 unquote("/") 0 0 $eye-height2 $eye-height2;
+    }
+    &-eye3 {
+      @include eyes(left);
+      width: $eye-width;
+      height: $eye-height2;
+      background: $bg-color;
+    }
+    &-eye4 {
+      @include eyes(left);
+      margin-top: $eye-height2 - $eye-shadow;
+      width: $eye-width;
+      height: $eye-shadow;
+      background: $black;
+    }
+    &-eye5 {
+      @include eyes(left);
+      margin-top: $eye-height2 - $eye-shadow;
+      width: $eye-shadow / 1.5;
+      height: $eye-height2 / 2;
+      background: $black;
+      border-radius: 0 0 0 $eye-shadow unquote("/") 0 0 0 $eye-height2 / 2;
+    }
+
+    &-eyebrow { @include eyebrows(left); }
+
+    &-cheek1 { @include cheeks(left, 22%); }
+    &-cheek2 { @include cheeks(left, 24.8%); }
+  }
+
+  .right {
+    &-eye1 {
+      @include eyes(right);
+      width: $eye-width;
+      height: $eye-height;
+      background: $face-color;
+      border-radius: 0 0 $eye-width $eye-width2 unquote("/") 0 0 $eye-height $eye-height2;
+    }
+    &-eye2 {
+      @include eyes(right);
+      margin-top: $eye-height2 - $eye-shadow * 1.6;
+      margin-right: $eye-width2 / 1.25;
+      width: $eye-width2 / 1.2;
+      height: $eye-height / 1.8;
+      border: thick solid $black;
+      border-radius: 0 0 $eye-width2 $eye-width2 unquote("/") 0 0 $eye-height2 $eye-height2;
+    }
+    &-eye3 {
+      @include eyes(right);
+      width: $eye-width;
+      height: $eye-height2;
+      background: $bg-color;
+    }
+    &-eye4 {
+      @include eyes(right);
+      margin-top: $eye-height2 - $eye-shadow;
+      width: $eye-width;
+      height: $eye-shadow;
+      background: $black;
+    }
+    &-eye5 {
+      @include eyes(right);
+      margin-top: $eye-height2 - $eye-shadow;
+      width: $eye-shadow / 1.5;
+      height: $eye-height2 / 2;
+      background: $black;
+      border-radius: 0 0 $eye-shadow 0 unquote("/") 0 0 $eye-height2 / 2 0;
+    }
+
+    &-eyebrow { @include eyebrows(right); }
+
+    &-cheek3 { @include cheeks(right, 26.5%); }
+    &-cheek4 { @include cheeks(right, 24%); }
+  }
+
+  .nose {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: $face-color;
+    width: 1px;
+    height: 3px;
+    transform: skewX(-15deg);
+  }
+
+
+  .mouth {
+    display: table;
+    position: relative;
+    top: 60%;
+    margin: auto;
+    width: $mouth-width2;
+    height: $mouth-height2 / 2.49;
+    border-bottom: 1px solid $face-color;
+    border-radius: 0 0 $mouth-width2 / 2 $mouth-width2 / 2 unquote("/") 0 0 $mouth-height2 / 4 $mouth-height2 / 4;
+  }
+  .mouth1 {
+    @include mouth;
+    margin-left: -$mouth-width2;
+    border-radius: $mouth-width2 / 4 $mouth-width2 0 0 unquote("/") $mouth-height2 / 2 $mouth-height2 / 2 0 0;
+  }
+  .mouth2 {
+    @include mouth;
+    margin-right: -$mouth-width2;
+    border-radius: $mouth-width2 $mouth-width2 / 4 0 0 unquote("/") $mouth-height2 / 2 $mouth-height2 / 2 0 0;
+  }
+}
