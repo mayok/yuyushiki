@@ -8,7 +8,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', function() {
-  gulp.src("scss/style.scss")
+  gulp.src("scss/*.scss")
     .pipe(plumber())
     .pipe(sass({
       includePaths: require('node-reset-scss').includePath

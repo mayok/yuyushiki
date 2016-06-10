@@ -68,51 +68,52 @@ html, body, #main {
   height: 100%;
 }
 
-#main {
-  background: $bg-color;
-}
-
 .container {
   padding-top: 1em;
 }
 
-.face {
-  position: relative;
-  width:  $face-width;
-  height: $face-height;
-  margin: 0 auto;
-}
+.yukari {
+  min-height: 100%;
+  background: $bg-color;
 
-.left {
-  &-eye { @include eyes(left); }
+  .face {
+    position: relative;
+    width:  $face-width;
+    height: $face-height;
+    margin: 0 auto;
+  }
 
-  &-eyebrow { @include eyebrows(left); }
+  .left {
+    &-eye { @include eyes(left); }
 
-  &-cheek1 { @include cheeks(left, 22%); }
-  &-cheek2 { @include cheeks(left, 24.8%); }
-  &-cheek3 { @include cheeks(left, 27.1%); }
-  &-cheek4 { @include cheeks(left, 29.6%); }
-}
+    &-eyebrow { @include eyebrows(left); }
 
-.right {
-  &-eye { @include eyes(right); }
+    &-cheek1 { @include cheeks(left, 22%); }
+    &-cheek2 { @include cheeks(left, 24.8%); }
+    &-cheek3 { @include cheeks(left, 27.1%); }
+    &-cheek4 { @include cheeks(left, 29.6%); }
+  }
 
-  &-eyebrow { @include eyebrows(right); }
+  .right {
+    &-eye { @include eyes(right); }
 
-  &-cheek1 { @include cheeks(right, 31%); }
-  &-cheek2 { @include cheeks(right, 29%); }
-  &-cheek3 { @include cheeks(right, 26.5%); }
-  &-cheek4 { @include cheeks(right, 24%); }
-}
+    &-eyebrow { @include eyebrows(right); }
 
-.mouth {
-  position: absolute;
-  top: 58%;
-  left:  0;
-  right: 0;
-  margin: auto;
-  width:  $mouth-width;
-  height: $mouth-height;
-  border-top: 2px solid $face-color;
-  border-radius: $mouth-width2 unquote("/") $mouth-height2;
+    &-cheek1 { @include cheeks(right, 31%); }
+    &-cheek2 { @include cheeks(right, 29%); }
+    &-cheek3 { @include cheeks(right, 26.5%); }
+    &-cheek4 { @include cheeks(right, 24%); }
+  }
+
+  .mouth {
+    position: absolute;
+    top: 58%;
+    left:  0;
+    right: 0;
+    margin: auto;
+    width:  $mouth-width;
+    height: $mouth-height;
+    border-top: 2px solid $face-color;
+    border-radius: $mouth-width2 unquote("/") $mouth-height2;
+  }
 }

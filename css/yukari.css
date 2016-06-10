@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body, #main {
+  height: 100%; }
+
+.container {
+  padding-top: 1em; }
+
+.yukari {
+  min-height: 100%;
+  background: #675793; }
+  .yukari .face {
+    position: relative;
+    width: 480px;
+    height: 640px;
+    margin: 0 auto; }
+  .yukari .left-eye {
+    position: absolute;
+    top: 30%;
+    width: 35px;
+    height: 100px;
+    background: #fefefe;
+    left: 27%; }
+  .yukari .left-eyebrow {
+    position: absolute;
+    top: 19%;
+    width: 2px;
+    height: 33.33333px;
+    background: #fefefe;
+    left: 33.5%;
+    -webkit-transform: skewX(40deg);
+            transform: skewX(40deg); }
+  .yukari .left-cheek1 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 22%; }
+  .yukari .left-cheek2 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 24.8%; }
+  .yukari .left-cheek3 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 27.1%; }
+  .yukari .left-cheek4 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    left: 29.6%; }
+  .yukari .right-eye {
+    position: absolute;
+    top: 30%;
+    width: 35px;
+    height: 100px;
+    background: #fefefe;
+    right: 27%; }
+  .yukari .right-eyebrow {
+    position: absolute;
+    top: 19%;
+    width: 2px;
+    height: 33.33333px;
+    background: #fefefe;
+    right: 33.5%;
+    -webkit-transform: skewX(-40deg);
+            transform: skewX(-40deg); }
+  .yukari .right-cheek1 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 31%; }
+  .yukari .right-cheek2 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 29%; }
+  .yukari .right-cheek3 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 26.5%; }
+  .yukari .right-cheek4 {
+    position: absolute;
+    top: 51%;
+    width: 3px;
+    height: 12.5px;
+    background: #f2d5cc;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    right: 24%; }
+  .yukari .mouth {
+    position: absolute;
+    top: 58%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 25px;
+    height: 16.66667px;
+    border-top: 2px solid #fefefe;
+    border-radius: 12.5px / 8.33333px; }
