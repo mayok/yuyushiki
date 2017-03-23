@@ -1,9 +1,7 @@
-@import "_reset";
+@import "./style";
 
 $bg-color:    darken(#cec791, 17%);
 $face-color:  #fefefe;
-$black:       #585c68;
-$cheek-color: #f2d5cc;
 
 $face-width:    480px;
 $face-height:   640px;
@@ -74,14 +72,6 @@ $mouth-height2: $mouth-height / 2;
   width: $mouth-width2 * 1.2;
   height: $mouth-height2;
   border-top: 1px solid $face-color;
-}
-
-html, body, #main {
-  height: 100%;
-}
-
-.container {
-  padding-top: 1em;
 }
 
 .yui {

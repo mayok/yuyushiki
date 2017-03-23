@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "description": "css でゆゆ式のキャラクターを描く",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "sanitize.css": "^5.0.0"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.1",
-    "node-reset-scss": "^1.0.1",
-    "node-sass": "^3.7.0",
-    "nodemon": "^1.9.2",
-    "sanitize.css": "^3.3.0"
+    "node-sass": "^4.5.1",
+    "nodemon": "^1.9.2"
   },
   "scripts": {
-    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build": "node-sass --output-style compressed -o ./css ./scss",
+    "watch": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",

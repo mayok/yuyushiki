@@ -1,8 +1,7 @@
-@import "_reset";
+@import "./style";
 
 $bg-color: darken(#7361a2, 5%);
 $face-color: #fefefe;
-$cheek-color: #f2d5cc;
 
 $face-width:  480px;
 $face-height: 640px;
@@ -62,14 +61,6 @@ $mouth-height2: $mouth-height / 2;
   } @else {
     right: $v;
   }
-}
-
-html, body, #main {
-  height: 100%;
-}
-
-.container {
-  padding-top: 1em;
 }
 
 .yukari {
